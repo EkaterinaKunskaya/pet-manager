@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/pet-manager/static/css/main.3e955c97.css",
+    "main.js": "/pet-manager/static/js/main.aaac577d.js",
+    "static/js/787.a7a9703a.chunk.js": "/pet-manager/static/js/787.a7a9703a.chunk.js",
+    "static/media/RubikBeastly-Regular.ttf": "/pet-manager/static/media/RubikBeastly-Regular.78748e7f989131764ed1.ttf",
+    "static/media/backgraund.png": "/pet-manager/static/media/backgraund.6a5838c7ce3c139be790.png",
+    "static/media/Pacifico-Regular.ttf": "/pet-manager/static/media/Pacifico-Regular.c0d735fc04154e03a691.ttf",
+    "static/media/Amita-Bold.ttf": "/pet-manager/static/media/Amita-Bold.a321a8580d5e68baa049.ttf",
+    "static/media/paw.png": "/pet-manager/static/media/paw.dec7435c378a72dbdb4f.png",
+    "index.html": "/pet-manager/index.html",
+    "main.3e955c97.css.map": "/pet-manager/static/css/main.3e955c97.css.map",
+    "main.aaac577d.js.map": "/pet-manager/static/js/main.aaac577d.js.map",
+    "787.a7a9703a.chunk.js.map": "/pet-manager/static/js/787.a7a9703a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e955c97.css",
+    "static/js/main.aaac577d.js"
+  ]
+}
