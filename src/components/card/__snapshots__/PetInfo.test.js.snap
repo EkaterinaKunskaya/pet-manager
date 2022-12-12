@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`работа PetInfo 1`] = `
+<div
+  className="PetInfo"
+>
+  <div
+    className="info-block"
+  >
+    <div
+      className="img-name"
+    >
+      <div
+        className="pet-name"
+      >
+        Милка
+      </div>
+      <span
+        className="ant-avatar ant-avatar-circle ant-avatar-image css-dev-only-do-not-override-1s3dcof"
+        style={
+          Object {
+            "fontSize": 18,
+            "height": 200,
+            "lineHeight": "200px",
+            "width": 200,
+          }
+        }
+      >
+        <img
+          onError={[Function]}
+          src="paw.png"
+        />
+      </span>
+    </div>
+    <div
+      className="info-text"
+    >
+      <p>
+        <b>
+          Вид: 
+        </b>
+        Собака
+      </p>
+      <p>
+        <b>
+          Порода: 
+        </b>
+        Беспородная
+      </p>
+      <p>
+        <b>
+          Дата рождения: 
+        </b>
+        23.11.2011
+      </p>
+      <p>
+        <b>
+          Количество лет: 
+        </b>
+        11 лет 
+  и 0 месяцев
+      </p>
+      <p>
+        <b>
+          Пол: 
+        </b>
+        Самка
+      </p>
+      <p>
+        <b>
+          Сведения о репродукции: 
+        </b>
+        Стерилизована
+      </p>
+      <p>
+        <b>
+          Номер микрочипа: 
+        </b>
+        -
+      </p>
+      <p>
+        <b>
+          Номер клейма: 
+        </b>
+        -
+      </p>
+      <p>
+        <b>
+          Заметки: 
+        </b>
+        Хорошая девочка.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`работа PetInfo 2`] = `
+<div
+  className="PetInfo"
+>
+  <div
+    className="info-block"
+  >
+    <div
+      className="img-name"
+    >
+      <div
+        className="pet-name"
+      >
+        Милка
+      </div>
+      <span
+        className="ant-avatar ant-avatar-circle ant-avatar-image css-dev-only-do-not-override-1s3dcof"
+        style={
+          Object {
+            "fontSize": 18,
+            "height": 200,
+            "lineHeight": "200px",
+            "width": 200,
+          }
+        }
+      >
+        <img
+          onError={[Function]}
+          src="paw.png"
+        />
+      </span>
+    </div>
+    <div
+      className="info-text"
+    >
+      <p>
+        <b>
+          Вид: 
+        </b>
+        Собака
+      </p>
+      <p>
+        <b>
+          Порода: 
+        </b>
+        Беспородная
+      </p>
+      <p>
+        <b>
+          Дата рождения: 
+        </b>
+        23.11.2011
+      </p>
+      <p>
+        <b>
+          Количество лет: 
+        </b>
+        11 лет 
+  и 0 месяцев
+      </p>
+      <p>
+        <b>
+          Пол: 
+        </b>
+        Самка
+      </p>
+      <p>
+        <b>
+          Сведения о репродукции: 
+        </b>
+        Стерилизована
+      </p>
+      <p>
+        <b>
+          Номер микрочипа: 
+        </b>
+        -
+      </p>
+      <p>
+        <b>
+          Номер клейма: 
+        </b>
+        -
+      </p>
+      <p>
+        <b>
+          Заметки: 
+        </b>
+        Хорошая девочка.
+      </p>
+    </div>
+  </div>
+</div>
+`;

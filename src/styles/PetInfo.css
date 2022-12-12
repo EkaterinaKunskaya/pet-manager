@@ -1,0 +1,31 @@
+.PetInfo {
+    background: white;
+    margin-top: -16px;
+    border-radius: 0 8px 8px 8px;
+    padding: 50px;
+}
+
+.info-block {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.img-name {
+    float: left;
+    padding: 0 15% 8% 0;
+}
+
+.pet-name {
+    text-align: center;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.info-text {
+    width: 100%;
+    font-family: sans-serif;
+    font-size: .7rem;
+    line-height: 50px;
+    word-wrap: break-word;
+}

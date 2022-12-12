@@ -1,0 +1,15 @@
+.PetCard {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.PetCard .PetCard-btns {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.PetCard .PetCard-btns .card-btn {
+    width: 180px;
+}

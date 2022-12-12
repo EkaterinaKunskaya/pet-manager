@@ -1,0 +1,36 @@
+.PetAddForm {
+    width: 50%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px 50px;
+}
+
+.PetAddForm h1 {
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #00bdfb;
+}
+
+.PetAddForm p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: sans-serif;
+    font-size: .7rem;
+    text-align: center;
+    color: #53595c;
+}
+
+.PetAddForm .form-btns {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.form-btn {
+    width: 160px;
+}
