@@ -2,8 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Table, Popconfirm } from 'antd';
 import { CloseSquareOutlined } from '@ant-design/icons';
 import { nanoid } from 'nanoid';
+
 import { showRecomendation } from '../helpers/ShowRecomendation';
 import { countVetDate } from '../helpers/CountVetDate';
+
 import '../../styles/PetVet.css';
 
 let proceduresArr = [];
@@ -13,7 +15,7 @@ const PetVet = ({ card, firebase }) => {
 
     const { isLoading, addProcedure, removeProcedure } = firebase;
     const { procedures } = card;
-    
+
     const [data, setData] = useState();
     const [loading, setLoading] = useState(true);
     const [disLatestDate, setDisLatestDate] = useState(false);
@@ -32,7 +34,6 @@ const PetVet = ({ card, firebase }) => {
     );
 
     function setDateMode(e) {
-        console.log(e.currentTarget.id)
         if (disSetDate && e.currentTarget.id === 'set-date-btn') {
             setDisLatestDate(true);
             setDisSetDate(false);
@@ -52,7 +53,6 @@ const PetVet = ({ card, firebase }) => {
         };
 
         addProcedure(card.id, newProcedure);
-
         setData((pre) => { return [...pre, newProcedure] });
     };
 
@@ -60,7 +60,6 @@ const PetVet = ({ card, firebase }) => {
         removeProcedure(card.id, idProc);
         setData((pre) => { return pre.filter((procedure) => procedure.idProc !== idProc) });
     };
-
 
     const text = 'Вы действительно хотите отменить процедуру?'
 
@@ -103,6 +102,40 @@ const PetVet = ({ card, firebase }) => {
             ),
         }];
 
+    const columnsMobile = [
+        {
+            title: 'Процедура',
+            dataIndex: 'nameProc',
+            key: 'nameProc',
+            align: 'center',
+            width: 200,
+        }, {
+            title: 'Дата',
+            dataIndex: 'dateProc',
+            key: 'dateProc',
+            align: 'center',
+            width: 120,
+        }, {
+            title: 'Дейтсвие',
+            dataIndex: '',
+            key: 'x',
+            fixed: 'right',
+            align: 'center',
+            width: 120,
+            render: (data) => (
+                <Popconfirm
+                    placement="topLeft"
+                    title={text}
+                    onConfirm={() => {
+                        deleteProcedure(data.key);
+                    }}
+                    okText="Да" cancelText="Нет">
+                    <CloseSquareOutlined style={{ fontSize: '30px' }} />
+                </Popconfirm>
+            ),
+        }];
+
+    const isMobile = window.innerWidth < 640;
 
     return (
         <div className="PetVet">
@@ -134,8 +167,8 @@ const PetVet = ({ card, firebase }) => {
                 <button className="vet-save-btn" onClick={setProcedureReminder}>Установить напоминание</button>
 
                 <Table
-                    className=''
-                    columns={columns}
+                    className='VetTable'
+                    columns={(isMobile) ? columnsMobile : columns}
                     dataSource={
                         data?.map((el) => {
                             return {
@@ -147,18 +180,16 @@ const PetVet = ({ card, firebase }) => {
                         })
                     }
                     loading={loading}
-                    size="midle"
+                    size={(isMobile) ? "small" : "midle"}
                     pagination={{
                         defaultPageSize: 5,
                         pageSizeOptions: [5, 10, 20, 50, 100],
                         size: 'default',
                     }}
                 />
-
             </div>
         </div>
     );
-
 };
 
 export default React.memo(PetVet);

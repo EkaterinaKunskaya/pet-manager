@@ -56,7 +56,6 @@ html,
 body {
   background: url("../assets/image/backgraund.png") repeat-x;
   background-color: #FFFFFF;
-  background-size: contain;
   top: 0;
   width: 100%;
   background-position: 0 0;
@@ -73,11 +72,26 @@ body {
   padding: 2% 0 5% 0;
 }
 
-.main {
-  display: flex;
-  justify-content: space-between;  
+.header-label {
+  font-family: 'Amita';
+  color: #FFFFFF !important;
+  font-size: 2.5rem;
+  letter-spacing: 6px;
+  align-items: center;
+  text-shadow: 1px 0 1px #000, 0 3px 3px #000, -1px 0 3px #000, 0 -1px 3px #000;
 }
 
+.header-title {
+  font-family: 'Pacifico';
+  color: #cf8145;
+  font-size: 1.5rem;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
 
 .aside {
   width: 44%;
@@ -89,7 +103,7 @@ body {
   text-align: right;
   display: flex;
   flex-direction: column;
-  align-items:flex-end;
+  align-items: flex-end;
 }
 
 .aside p {
@@ -100,7 +114,7 @@ body {
   width: 55%;
 }
 
-.button-custom  {
+.button-custom {
   font-family: 'Pacifico', sans-serif;
   font-size: 20px;
   text-decoration: none;
@@ -147,7 +161,6 @@ body {
   border-color: #1676fda6;
 }
 
-
 .footer {
   color: rgba(0, 0, 0, 0.88);
   text-align: center;
@@ -161,106 +174,79 @@ body {
 }
 
 
+@media (max-width: 320px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.parallax_body {
-  
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.parallax_container {
-  position: relative;
-  z-index: 2;
-}
-
-.parallax_label {
-  font-family: 'Amita';
-  color: #FFFFFF !important;
-  display: flex;
-  margin-bottom: 5px;
-  font-size: 60px;
-  letter-spacing: 6px;
-  align-items: center;
-  text-shadow: 1px 0 1px #000, 0 3px 3px #000, -1px 0 3px #000, 0 -1px 3px #000;
-}
-
-.parallax_title {
-  font-family: 'Pacifico';
-  color: #cf8145;
-  font-size: 35px;
-  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
-  white-space: pre;
-}
-
-
-
-
-@media (max-width: 767px) {
-  .parallax_title {
-    font-size: 50px;
+  html,
+  body {
+    background: url("../assets/image/backgraund.png") repeat-x;
+    background-size: 500px;
+    font-size: .8em;
+    color: #fff;
   }
 
-  .parallax_label {
-    font-size: 16px;
-    margin: 0 0 15px;
-  }
-}
-
-@media (max-width: 479px) {
-  .parallax_title {
-    font-size: 36px;
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
   }
 
-  .parallax_label::before {
-    flex: 0 0 50px;
-    margin: 0 10px;
+  .header {
+    padding: 2% 0 5% 0;
   }
-}
 
+  .header-label {
+    font-family: 'Amita';
+    color: #FFFFFF !important;
+    font-size: 2.5rem;
+    letter-spacing: 6px;
+    align-items: center;
+    text-shadow: 1px 0 1px #000, 0 3px 3px #000, -1px 0 3px #000, 0 -1px 3px #000;
+  }
 
+  .header-title {
+    font-family: 'Pacifico';
+    color: #cf8145;
+    font-size: 1.5rem;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+  }
 
-.error {
-  position: relative;
-  padding: 10px;
-}
+  .main {
+    display: block;
+  }
 
-.error p {
-  position: absolute;
-  font-family: 'Pacifico', sans-serif;
-  font-size: 30px;
-  margin-top: 400px;
-  margin-left: 80px;
-}
+  .aside {
+    width: 100%;
+    padding: 0 0 0 0;
+    font-family: 'Pacifico', sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 auto;
+  }
 
-.error-title {
-  position: absolute;
-  font-family: 'Pacifico', sans-serif;
-  font-size: 50px;
-  line-height: 1.3;
-  margin-top: 250px;
-  margin-left: 80px;
-  text-shadow: 1px 0 1px #000, 0 3px 3px #000, -1px 0 3px #000, 0 -1px 3px #000;
-}
+  .aside p {
+    display: none;
+  }
 
-.error img {
-  float: right;
+  .CardsTable {
+    width: 100%;
+  }
+
+  .main-btn {
+    position: static;
+
+    border-color: #1676fda6;
+    color: #1676fda6;
+  }
+
+  .main-btn:hover:after {
+    border-color: #1676fda6;
+  }
+
+  .CardsTable {
+    width: 300px;
+  }
 }

@@ -10,8 +10,8 @@ function showAge (birthday) {
   let transformBirthday = transformDate(birthday);
 
   const age = new calculateAge(transformBirthday, transformNow).getObject()
-  return `${age.years} ${(age.years === 1)?'год':(age.years >1 && age.years <5)?'года':'лет'} 
-  и ${age.months} ${(age.months === 1)?'месяц':(age.months >1 && age.months <5)?'месяца':'месяцев'}`;
+  return `${age.years} ${(age.years === 1)?'год':(age.years >1 && age.years <5)?'года':'лет'} ${
+    (age.months === 0)? '':`и ${age.months} ${(age.months === 1)?'месяц':(age.months >1 && age.months <5)?'месяца':'месяцев'}`}`;
 }
 
 export {showAge};

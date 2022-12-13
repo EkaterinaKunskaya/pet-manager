@@ -75,3 +75,52 @@
 .PetEditForm-btns .PetEditForm-btn {
     width: 120px;
 }
+
+@media (max-width: 320px) {
+    
+    .PetEdit {
+        width: 100%;
+    }
+
+    .PetEdit .edit-block {
+        align-items: center;
+        padding: 20px 20px;
+    }
+
+    .PetEdit .edit-block h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .PetEdit .edit-block .edit-content {
+        display: block;
+    }
+
+    .PetEdit .edit-block .edit-content .edit-img-block {
+        width: 100%;
+    }
+
+    .edit-img-block .edit-img-btn-delete {
+        margin: 30px 0 30px 0;
+        width: 160px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .PetEdit .edit-block .edit-content .edit-info {
+        padding: 10px;
+    }
+
+    .PetEditForm-btns {
+        margin-top: 15%;
+        width: 100%;
+        display: block;
+    }
+
+    .PetEditForm-btns .PetEditForm-btn {
+        width: 230px;
+        margin-bottom: 20px;
+    }
+}

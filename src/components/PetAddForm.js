@@ -16,7 +16,7 @@ import '../styles/PetAddForm.css';
 const { TextArea } = Input;
 
 
-export const PetAddForm = ({ firebase }) => {
+const PetAddForm = ({ firebase }) => {
   const { addNewCard } = firebase;
   let navigate = useNavigate();
 
@@ -28,7 +28,6 @@ export const PetAddForm = ({ firebase }) => {
     }
     reader.onload = function () {
       file = reader.result;
-
     }
     return file;
   }
@@ -53,12 +52,13 @@ export const PetAddForm = ({ firebase }) => {
     navigate('/');
   }
 
+  const isMobile = window.innerWidth < 640;
+
   return (
     <>
-
       <Form className="PetAddForm" onFinish={finishFunk}
-        labelCol={{ span: 10 }} wrapperCol={{ span: 13, }}
-        layout="horizontal" autoComplete="off">
+        labelCol={{ span: (isMobile) ? 300 : 10 }} wrapperCol={{ span: (isMobile) ? 300 : 13 }}
+        layout={(isMobile) ? "vertical" : "horizontal"} autoComplete="off">
         <h1>Регистрация карточки пушистика</h1>
         <p>Пожалуйста, заполните данную форму для создания индивилуальной карточки питомца.</p>
 
@@ -189,9 +189,9 @@ export const PetAddForm = ({ firebase }) => {
             <Button className='form-btn' type='primary' htmlType='submit'>Добавить карточку</Button>
           </Form.Item>
         </div>
-
-
       </Form>
     </>
   );
 };
+
+export default React.memo(PetAddForm);

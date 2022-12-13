@@ -29,3 +29,33 @@
     line-height: 50px;
     word-wrap: break-word;
 }
+
+
+@media (max-width: 320px) {
+    
+    .PetInfo {
+        background: white;
+        margin-top: -16px;
+        padding: 20px;
+    }
+
+    .info-block {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .img-name {
+        padding: 0 15% 8% 0;
+    }
+
+    .pet-name {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .info-text {
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 40px;
+    }
+}

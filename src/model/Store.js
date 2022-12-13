@@ -5,7 +5,6 @@ import FirebaseService from "./FirebaseService";
 configure({ enforceActions: 'observed' });
 
 class Store {
-
     constructor() {
         this.firebaseService = new FirebaseService(this);
         makeAutoObservable(this);
@@ -13,6 +12,5 @@ class Store {
 
     firebaseService;
 }
-
 
 export default new Store();

@@ -34,3 +34,27 @@
 .form-btn {
     width: 160px;
 }
+
+@media (max-width: 320px) {
+    
+    .PetAddForm {
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    .PetAddForm p {
+        margin-bottom: 20px;
+    }
+
+    .PetAddForm .form-btns {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .form-btn {
+        width: 240px;
+        margin-bottom: 20px;
+    }
+}

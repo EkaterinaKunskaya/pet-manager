@@ -3,7 +3,7 @@ import { countFeed } from '../helpers/СountFeed';
 
 import '../../styles/PetFeedCalc.css';
 
-export const PetFeedCalc = ({ card }) => {
+const PetFeedCalc = ({ card }) => {
 
     const [energy, setEnergy] = useState(0);
     const [foodSpoons, setFoodSpoons] = useState(0);
@@ -75,7 +75,6 @@ export const PetFeedCalc = ({ card }) => {
                     <button className="calc-btn" onClick={clearCalcForm}>Очистить</button>
                 </div>
 
-
                 <div className="calc-results">
                     <div className="calc-result">
                         <span><b>{`Рекомендуемая суточная норма сухого корма, г:   ${dailyAmount}`}</b></span>
@@ -101,3 +100,5 @@ export const PetFeedCalc = ({ card }) => {
     );
 
 };
+
+export default React.memo(PetFeedCalc);

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Table, Button, Popconfirm } from 'antd';
-
-import { Avatar } from 'antd';
+import { Table, Button, Popconfirm, Avatar } from 'antd';
 import { NavLink } from 'react-router-dom'
+
 import pawImg from '../assets/image/paw.png';
 
 let cardsArr;
+
+
 const CardsTable = ({ firebase, cbForceUpdate }) => {
 
     const { isLoading, removeCard, cards } = firebase;
@@ -31,7 +32,7 @@ const CardsTable = ({ firebase, cbForceUpdate }) => {
             width: 100,
             render: (data) => (
                 <>
-                    {(data) && <Avatar size={85} src={data} /> }
+                    {(data) && <Avatar size={85} src={data} />}
                     {(!data) && <Avatar size={85} src={pawImg} />}
                 </>
             ),
@@ -79,12 +80,38 @@ const CardsTable = ({ firebase, cbForceUpdate }) => {
 
                 </div>
             ),
-    }];
+        }];
+
+    const columnsMobile = [
+        {
+            title: 'Кличка',
+            dataIndex: 'petName',
+            key: 'petName',
+            align: 'center',
+            width: 140,
+        },
+        {
+            title: 'Дейтсвие',
+            dataIndex: '',
+            key: 'x',
+            fixed: 'right',
+            align: 'center',
+            width: 140,
+            render: (data) => (
+                <NavLink to={`/pet-card/${data.key}`}>
+                    <Button type="primary">
+                        Открыть
+                    </Button>
+                </NavLink>
+            ),
+        }];
+
+    const isMobile = window.innerWidth < 640;
 
     return (
         <Table
             className='CardsTable'
-            columns={columns}
+            columns={(isMobile) ? columnsMobile : columns}
             dataSource={
                 data?.map((el) => {
                     return {
@@ -96,7 +123,7 @@ const CardsTable = ({ firebase, cbForceUpdate }) => {
                 })
             }
             loading={loading}
-            size="midle"
+            size={(isMobile) ? "small" : "midle"}
             pagination={{
                 defaultPageSize: 5,
                 pageSizeOptions: [5, 10, 20, 50, 100],

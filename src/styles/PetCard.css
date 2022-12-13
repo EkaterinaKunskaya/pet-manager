@@ -13,3 +13,31 @@
 .PetCard .PetCard-btns .card-btn {
     width: 180px;
 }
+
+@media (max-width: 320px) {
+    
+    .PetCard {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .PetCard .PetCard-btns {
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .PetCard .PetCard-btns .card-btn {
+        width: 180px;
+        font-size: 1rem;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-color: #1676fda6;
+        color: #1676fda6;
+    }
+
+    .card-btn:hover:after {
+        border-color: #1676fda6;
+    }
+}
