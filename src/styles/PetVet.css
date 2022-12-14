@@ -68,7 +68,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .PetVet {
     margin-top: -16px;
     padding: 20px;

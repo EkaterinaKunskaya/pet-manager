@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { PetInfo } from './PetInfo';
+import PetInfo from './PetInfo';
 
 test('работа PetInfo', () => {
 

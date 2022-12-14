@@ -72,7 +72,7 @@ const PetFeedCalc = ({ card }) => {
 
                 <div className='calc-btns'>
                     <button className="calc-btn" data-testid='feed-count' onClick={count}>Рассчитать</button>
-                    <button className="calc-btn" onClick={clearCalcForm}>Очистить</button>
+                    <button className="calc-btn" data-testid='feed-clear' onClick={clearCalcForm}>Очистить</button>
                 </div>
 
                 <div className="calc-results">

@@ -14,7 +14,7 @@
     width: 180px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 420px) {
     
     .PetCard {
         width: 95%;
